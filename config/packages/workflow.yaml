@@ -1,0 +1,25 @@
+framework:
+    workflows:
+        payment:
+            type: 'state_machine'
+            supports:
+                - App\Model\Payment
+            initial_marking: new
+            marking_store:
+                type: method
+                property: state
+            places:
+                - new
+                - pending
+                - failed
+                - paid
+            transitions:
+                process:
+                    from: new
+                    to: pending
+                fail:
+                    from: pending
+                    to: failed
+                paying:
+                    from: pending
+                    to: paid
