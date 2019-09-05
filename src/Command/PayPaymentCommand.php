@@ -31,6 +31,8 @@ class PayPaymentCommand extends Command
         $stateMachine = $this->workflows->get($payment, 'payment');
         $stateMachine->apply($payment, 'process');
 
+        $payment->setState('yolo');
+
         var_dump($payment);
 
         $io->success('You have a new command! Now make it your own! Pass --help to see your options.');
