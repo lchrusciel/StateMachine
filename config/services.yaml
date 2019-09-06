@@ -33,3 +33,6 @@ services:
 
     App\Operator\InventoryOperator:
         public: true
+
+    App\Authorizer\BlockedAuthorizer:
+        public: true

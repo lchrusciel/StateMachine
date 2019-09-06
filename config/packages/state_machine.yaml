@@ -8,6 +8,7 @@ winzou_state_machine:
             pending: ~
             failed: ~
             paid: ~
+            blocked: ~
         transitions:
             process:
                 from: [new]
@@ -18,9 +19,16 @@ winzou_state_machine:
             pay:
                 from: [pending]
                 to: paid
+            block:
+                from: [pending]
+                to: blocked
         callbacks:
             before:
                 reduce_amount:
                     on: ["pay"]
                     do: ["@App\\Operator\\InventoryOperator", "__invoke"]
                     args: ["object"]
+            guard:
+                guard-blocked:
+                    to: ["blocked"]
+                    do: ["@App\\Authorizer\\BlockAuthorizer", "__invoke"]
