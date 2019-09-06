@@ -30,6 +30,7 @@ class PayPaymentCommand extends Command
 
         $stateMachine = $this->workflows->get($payment, 'payment');
         $stateMachine->apply($payment, 'process');
+        $stateMachine->apply($payment, 'pay');
 
         var_dump($payment);
 

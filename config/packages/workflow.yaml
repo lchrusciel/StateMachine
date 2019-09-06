@@ -20,6 +20,6 @@ framework:
                 fail:
                     from: pending
                     to: failed
-                paying:
+                pay:
                     from: pending
                     to: paid
