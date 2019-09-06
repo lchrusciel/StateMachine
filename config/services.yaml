@@ -48,3 +48,6 @@ services:
 
     App\Authorizer\BlockedAuthorizer:
         public: true
+
+    App\MessageDispatcher\InformAboutPaidPayment:
+        public: true

@@ -28,7 +28,12 @@ winzou_state_machine:
                     on: ["pay"]
                     do: ["@App\\Operator\\InventoryOperator", "__invoke"]
                     args: ["object"]
+            after:
+                inform_about_payment:
+                    on: ["pay"]
+                    do: ["@App\\MessageDispatcher\\InformAboutPaidPayment", "__invoke"]
+                    args: ["object"]
             guard:
                 guard-blocked:
                     to: ["blocked"]
-                    do: ["@App\\Authorizer\\BlockAuthorizer", "__invoke"]
+                    do: ["@App\\Authorizer\\BlockedAuthorizer", "__invoke"]
