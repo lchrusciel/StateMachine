@@ -31,6 +31,12 @@ services:
                 event: workflow.payment.enter.paid
                 method: __invoke
 
+    App\EventListener\BlockedGuardListener:
+        tags:
+            -   name: kernel.event_listener
+                event: workflow.payment.guard.block
+                method: __invoke
+
     App\Operator\InventoryOperator:
         public: true
 

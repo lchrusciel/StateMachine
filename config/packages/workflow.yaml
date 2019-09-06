@@ -13,6 +13,7 @@ framework:
                 - pending
                 - failed
                 - paid
+                - blocked
             transitions:
                 process:
                     from: new
@@ -23,3 +24,7 @@ framework:
                 pay:
                     from: pending
                     to: paid
+                block:
+                    guard: "is_granted('ROLE_ADMIN')"
+                    from: pending
+                    to: blocked
