@@ -10,6 +10,8 @@ final class PaymentPaidListener
 {
     public function __invoke(EnterEvent $event): void
     {
-        var_dump($event->getSubject());
+        $payment = $event->getSubject();
+        var_dump('Dispatched on transition');
+        var_dump($payment);
     }
 }

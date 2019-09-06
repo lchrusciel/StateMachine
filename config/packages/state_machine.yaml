@@ -1,0 +1,26 @@
+winzou_state_machine:
+    payment:
+        class: App\Model\Payment
+        property_path: state
+        graph: payment
+        states:
+            new: ~
+            pending: ~
+            failed: ~
+            paid: ~
+        transitions:
+            process:
+                from: [new]
+                to: pending
+            fail:
+                from: [pending]
+                to: failed
+            pay:
+                from: [pending]
+                to: paid
+        callbacks:
+            before:
+                reduce_amount:
+                    on: ["pay"]
+                    do: ["@App\\Trigger\\StateMachineTrigger", "__invoke"]
+                    args: ["object"]

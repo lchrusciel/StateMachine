@@ -30,3 +30,6 @@ services:
             -   name: kernel.event_listener
                 event: workflow.payment.enter.paid
                 method: __invoke
+
+    App\Trigger\StateMachineTrigger:
+        public: true

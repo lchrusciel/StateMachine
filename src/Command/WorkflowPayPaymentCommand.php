@@ -9,9 +9,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Workflow\Registry;
 
-class PayPaymentCommand extends Command
+class WorkflowPayPaymentCommand extends Command
 {
-    protected static $defaultName = 'app:pay-payment';
+    protected static $defaultName = 'app:pay-with-workflow';
     /** @var Registry */
     private $workflows;
 
