@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9797404ac0a294a38816b3122209659",
+    "content-hash": "9c4da4d40355d274b247a678ece91257",
     "packages": [
         {
             "name": "psr/cache",
@@ -736,6 +736,57 @@
                 "standards"
             ],
             "time": "2019-06-20T06:46:26+00:00"
+        },
+        {
+            "name": "symfony/expression-language",
+            "version": "v4.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/expression-language.git",
+                "reference": "c8b47d8820d3bf75f757eec8a2647584c14cf0c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/expression-language/zipball/c8b47d8820d3bf75f757eec8a2647584c14cf0c6",
+                "reference": "c8b47d8820d3bf75f757eec8a2647584c14cf0c6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/cache": "~3.4|~4.0",
+                "symfony/service-contracts": "^1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\ExpressionLanguage\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony ExpressionLanguage Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-08-08T09:29:19+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -1895,6 +1946,106 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2019-08-20T14:27:59+00:00"
+        },
+        {
+            "name": "winzou/state-machine",
+            "version": "0.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/winzou/state-machine.git",
+                "reference": "37f03a316b9a461ed443906e158bab8d358542df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/winzou/state-machine/zipball/37f03a316b9a461ed443906e158bab8d358542df",
+                "reference": "37f03a316b9a461ed443906e158bab8d358542df",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/event-dispatcher": "~2.1|~3.0|~4.0",
+                "symfony/expression-language": "~2.4|~3.0|~4.0",
+                "symfony/property-access": "~2.1|~3.0|~4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0",
+                "twig/twig": "~1.0"
+            },
+            "suggest": {
+                "twig/twig": "Access the state machine in your twig templates (~1.0)"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SM": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Bacco",
+                    "email": "alexandre.bacco@gmail.com",
+                    "homepage": "http://alex.bacco.fr"
+                }
+            ],
+            "description": "A very lightweight yet powerful PHP state machine",
+            "homepage": "https://github.com/winzou/StateMachine",
+            "keywords": [
+                "callback",
+                "event",
+                "state",
+                "statemachine"
+            ],
+            "time": "2018-02-11T18:07:15+00:00"
+        },
+        {
+            "name": "winzou/state-machine-bundle",
+            "version": "v0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/winzou/StateMachineBundle.git",
+                "reference": "c90d4960016bea3cf7759ee7cfe5eca47ae84506"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/winzou/StateMachineBundle/zipball/c90d4960016bea3cf7759ee7cfe5eca47ae84506",
+                "reference": "c90d4960016bea3cf7759ee7cfe5eca47ae84506",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">5.3.0",
+                "symfony/framework-bundle": "~2.1|~3.0|^4.0",
+                "winzou/state-machine": "~0.3"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "winzou\\Bundle\\StateMachineBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Bacco",
+                    "homepage": "http://alex.bacco.fr"
+                }
+            ],
+            "description": "Bundle for the very lightweight yet powerful PHP state machine",
+            "keywords": [
+                "bundle",
+                "statemachine",
+                "symfony"
+            ],
+            "time": "2018-08-06T19:29:52+00:00"
         }
     ],
     "packages-dev": [
