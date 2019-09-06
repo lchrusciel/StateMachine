@@ -31,6 +31,12 @@ services:
                 event: workflow.payment.enter.paid
                 method: __invoke
 
+    App\EventListener\AfterPaymentPaidListener:
+        tags:
+            -   name: kernel.event_listener
+                event: workflow.payment.entered.paid
+                method: __invoke
+
     App\EventListener\BlockedGuardListener:
         tags:
             -   name: kernel.event_listener

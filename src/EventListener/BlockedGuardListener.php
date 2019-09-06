@@ -10,6 +10,6 @@ final class BlockedGuardListener
 {
     public function __invoke(GuardEvent $event): void
     {
-//        $event->setBlocked(true);
+        $event->setBlocked(true);
     }
 }
