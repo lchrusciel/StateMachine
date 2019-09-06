@@ -31,5 +31,5 @@ services:
                 event: workflow.payment.enter.paid
                 method: __invoke
 
-    App\Trigger\StateMachineTrigger:
+    App\Operator\InventoryOperator:
         public: true

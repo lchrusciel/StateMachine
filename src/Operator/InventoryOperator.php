@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Trigger;
+namespace App\Operator;
 
 use App\Model\Payment;
 
-final class StateMachineTrigger
+final class InventoryOperator
 {
     public function __invoke(Payment $payment): void
     {

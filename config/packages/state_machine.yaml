@@ -22,5 +22,5 @@ winzou_state_machine:
             before:
                 reduce_amount:
                     on: ["pay"]
-                    do: ["@App\\Trigger\\StateMachineTrigger", "__invoke"]
+                    do: ["@App\\Operator\\InventoryOperator", "__invoke"]
                     args: ["object"]
