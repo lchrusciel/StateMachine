@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Command;
 
 use App\Model\Payment;
@@ -15,10 +17,8 @@ use Symfony\Component\Workflow\Registry;
 class WorkflowPayPaymentCommand extends Command
 {
     protected static $defaultName = 'app:pay-with-workflow';
-    /** @var Registry */
-    private $workflows;
-    /** @var TokenStorageInterface */
-    private $storage;
+    private Registry $workflows;
+    private TokenStorageInterface $storage;
 
     public function __construct(Registry $workflows, TokenStorageInterface $storage)
     {

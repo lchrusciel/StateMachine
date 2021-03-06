@@ -6,8 +6,7 @@ namespace App\Model;
 
 final class Payment
 {
-    /** @var string */
-    private $state = 'new';
+    private string $state = 'new';
 
     public function getState(): string
     {

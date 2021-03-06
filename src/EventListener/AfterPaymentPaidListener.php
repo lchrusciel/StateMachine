@@ -12,10 +12,7 @@ use Symfony\Component\Workflow\Event\EnterEvent;
 
 final class AfterPaymentPaidListener
 {
-    /**
-     * @var MessageBusInterface
-     */
-    private $bus;
+    private MessageBusInterface $bus;
 
     public function __construct(MessageBusInterface $bus)
     {

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Command;
 
 use App\Model\Payment;
@@ -14,8 +16,7 @@ class WinzouPayPaymentCommand extends Command
 {
     protected static $defaultName = 'app:pay-with-winzou';
 
-    /** @var FactoryInterface */
-    private $factory;
+    private FactoryInterface $factory;
 
     public function __construct(FactoryInterface $factory)
     {
